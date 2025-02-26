@@ -109,11 +109,26 @@ We welcome contributions to enhance model accuracy, feature set, or documentatio
 
 ## 📚 References
 
-Dataset taken from:
-Open-Source RTL Benchmark Datasets (Recommended)
-✅ ISCAS85, ISCAS89, ITC99 Benchmarks
-📌 ISCAS & ITC Benchmark Circuits
-➡ Verilog/VHDL circuits ke benchmarks jo testing ke liye use ho sakte hain!
+## 📂 Dataset Source
+
+Our dataset is generated using open-source RTL benchmarks and feature extraction from synthesized reports.
+
+### 🔹 Open-Source RTL Benchmark Datasets
+- ✅ **ISCAS85, ISCAS89, ITC99 Benchmarks**  
+  📌 [ISCAS & ITC Benchmark Circuits](https://www.cbl.ncsu.edu/benchmarks/)  
+  These circuits provide a standard dataset for digital design testing and ML-based predictions.
+  
+- ✅ **OpenCores (Public RTL Circuits)**  
+  📌 [OpenCores - Public RTL Circuits](https://opencores.org/)  
+  Contains open-source Verilog/VHDL implementations useful for feature extraction.
+
+### 🔹 Generated Dataset
+- Our dataset consists of:
+  - **Fan-In, Fan-Out, and Gate Count** extracted from Verilog designs.
+  - **Estimated Logic Depth & Delay** calculated from combinational paths.
+  - **Stored in:** `feature_data.csv` (Generated via `feature_extraction.py`).
+  
+This dataset is used to train our ML models for predicting combinational complexity.
 
 
 Tools & Documentation
