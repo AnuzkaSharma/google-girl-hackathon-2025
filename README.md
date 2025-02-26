@@ -104,8 +104,8 @@ We welcome contributions to enhance model accuracy, feature set, or documentatio
 
 ## 📧 Contact Information
 
-- **GitHub:** [Your GitHub Profile]((https://github.com/AnuzkaSharma))
-- **LinkedIn:** [Your LinkedIn Profile]((https://www.linkedin.com/in/anuzka/))
+- **GitHub:** ((https://github.com/AnuzkaSharma))
+- **LinkedIn:** ((https://www.linkedin.com/in/anuzka/))
 
 ## 📚 References
 
