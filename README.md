@@ -1,109 +1,93 @@
-📌 Project Name: [Your Project Name]
+# 📌 Project Name: [Your Project Name]
 
-🚀 Project Overview
+## 🚀 Project Overview
 
-This project aims to predict the combinational depth of crucial pre-identified signals in an RTL module using machine learning. Instead of running a full synthesis (which is time-consuming), our model provides quick estimations using extracted features.
+Have you ever waited *forever* for a synthesis tool to give you results? 😩 Well, our project changes that! Instead of running a complete synthesis (which takes a lot of time), we use **machine learning** to quickly predict the **combinational depth** of crucial signals in an RTL module. 
 
-🔹 Objective
+### 🔹 Why does this matter?
+- **Time-saving:** Instead of running full synthesis, we get quick predictions.
+- **Feature-based learning:** We analyze key signal parameters like Fan-In, Fan-Out, and Gate Count.
+- **Higher efficiency:** Our ML model gives accurate results without the long computation time.
 
-Reduce synthesis run-time by providing ML-based combinational depth prediction.
+---
 
-Use feature engineering to extract impactful parameters (Fan-In, Fan-Out, etc.).
+## ⚙️ Installation & Setup
 
-Ensure high accuracy & fast inference for real-world usability.
+Even if you're new to this, setting up is *super easy*! 🚀 Just follow these steps:
 
-⚙️ Installation & Setup
-
-1️⃣ Clone the Repository
-
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/AnuzkaSharma/google-girl-hackathon-2025.git
 cd google-girl-hackathon-2025
+```
 
-2️⃣ Install Dependencies
-
+### 2️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-3️⃣ Download Pretrained Model & Scaler
-
+### 3️⃣ Download Pretrained Model & Scaler
+```bash
 wget https://raw.githubusercontent.com/AnuzkaSharma/google-girl-hackathon-2025/main/Training/saved_models/best_mlp.pkl -O best_mlp.pkl
 wget https://raw.githubusercontent.com/AnuzkaSharma/google-girl-hackathon-2025/main/Training/saved_models/mlp_scaler.pkl -O mlp_scaler.pkl
+```
 
-🎯 Usage Guide
+---
 
-1️⃣ Run the Model
+## 🎯 How to Use?
 
+### 1️⃣ Run the Model
+```bash
 python run_prediction.py --input sample_input.csv
+```
 
-2️⃣ Input Format
-
-The model requires a CSV file with the following features:
-
+### 2️⃣ Input Format
+Our model expects a CSV file with the following features:
+```csv
 Total Fan-In, Total Fan-Out, Total Gate Count, Estimated Delay
+```
 
-3️⃣ Output
-
-Predicted Combinational Depth
-
-Example Output:
-
+### 3️⃣ What do you get?
+A quick prediction of combinational depth! 🎯 Example output:
+```
 🔮 Predicted Combinational Depth: 1.92
+```
 
-📊 Model Details
+---
 
-🔹 ML Approach
+## 📊 Model Details
 
-Model Used: MLP Regressor
+### 🔹 Why did we choose MLP (Multi-Layer Perceptron)?
+- It's great for numerical prediction tasks like this.
+- It captures complex relationships between input features.
+- It performs better than traditional regression models for our dataset.
 
-Hyperparameter Tuning: GridSearchCV
+### 🔹 Feature Engineering – What's important?
+| Feature           | Importance |
+|------------------|------------|
+| Total Fan-Out    | 0.78       |
+| Estimated Delay  | 0.70       |
+| Total Gate Count | 0.39       |
+| Total Fan-In     | 0.22       |
 
-🔹 Feature Engineering
+### 🔹 How well does our model perform?
+| Metric  | Score |
+|---------|------|
+| MSE     | 0.0662 |
+| MAE     | 0.0443 |
+| R² Score| 0.98  |
 
-Feature
+---
 
-Importance
+## 🟢 Google Colab Demo (No setup needed!)
+Click below to run the model **directly in Google Colab** (No installation required!) 🚀
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnuzkaSharma/google-girl-hackathon-2025/blob/main/colab_demo.ipynb)
 
-Total Fan-Out
+---
 
-0.78
+## 🤝 Want to Contribute?
+If you have ideas or want to improve the model, **feel free to create a pull request!** 🚀
 
-Estimated Delay
-
-0.70
-
-Total Gate Count
-
-0.39
-
-Total Fan-In
-
-0.22
-
-🔹 Evaluation Metrics
-
-Metric
-
-Score
-
-MSE
-
-0.0662
-
-MAE
-
-0.0443
-
-R² Score
-
-0.98
-
-🟢 Google Colab Demo
-
-Run the model directly on Google Colab (No local setup required!)
-
-
-🤝 Contributing & Contact
-
-If you have any suggestions or want to contribute, feel free to create a pull request! 🚀
-
-🔹 GitHub: Your GitHub Profile🔹 LinkedIn: Your LinkedIn Profile
+🔹 **GitHub:** [Your GitHub Profile](https://github.com/AnuzkaSharma)  
+🔹 **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
 
